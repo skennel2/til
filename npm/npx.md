@@ -8,7 +8,7 @@ create-react-app 처럼 글로벌로 설치하여 사용하는 도구들을 글�
 ```
 npx create-react-app starlight
 ```
-해당 명령어를 사용하면 create-react-app 명령어를 설치없이 사용하게 되고 사용이 끝나면 즉시 제거한다. 
+해당 명령어를 사용하면 create-react-app 명령어를 전역 설치없이 임시로 설치해 사용하게 되고 사용이 끝나면 즉시 제거한다. 
 
 
 # 링크

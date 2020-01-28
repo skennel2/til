@@ -1,4 +1,4 @@
-## declare
+# declare
 
 TypeScript 파일에서 생성되지 않은 변수를 선언하는 데 사용된다. 
 
