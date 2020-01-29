@@ -1,4 +1,4 @@
-### 타입스크립트에서 둘의 차이
+# 타입스크립트에서 둘의 차이
 
 ```javascript
 let http = require('http');
