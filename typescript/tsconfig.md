@@ -116,3 +116,4 @@ watch모드에서 콘솔을 클리어하지 않고 출력된 값들을 콘솔에
 
 ## 참고
 (타입 스크립트 가이드 북)[https://yamoo9.gitbook.io/typescript/cli-env/tsconfig]
+(tsconfig 세부 옵션 보기 좋음)[https://www.typescriptlang.org/tsconfig] 
