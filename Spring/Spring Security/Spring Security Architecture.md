@@ -1,4 +1,16 @@
-## 인증
+# Spring Security Architecture
+
+## 인증과 권한 (Authentication and Access Control)
+
+### 인증
+인증의 중심 인터페이스 AuthenticationManager
+```java
+public interface AuthenticationManager {
+
+  Authentication authenticate(Authentication authentication)
+    throws AuthenticationException;
+}
+```
 
 ```
 AuthenticationManager - ProviderManager
