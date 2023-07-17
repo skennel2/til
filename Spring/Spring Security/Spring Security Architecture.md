@@ -76,6 +76,9 @@ Filter - GenericFilterBean - DelegatingFilterProxy
 @Bean 타압의 모든 Filter 구현체는 자동으로 컨테이너에게 등록된다.
 시큐리티 체인에 커스텀한 
 
+# 
+![2021_04_user_count](~@source/../img.png)
+
 ## 참고
 [공식문서](https://spring.io/guides/topicals/spring-security-architecture/)
 [스프링 부트에 필터를 '조심해서' 사용하는 두 가지 방법](https://taetaetae.github.io/2020/04/06/spring-boot-filter/#%EB%B0%A9%EB%B2%95-1--filterregistrationbean)
