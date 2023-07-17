@@ -24,3 +24,24 @@ Spring Boot 2.1↓ with Java 8 - 11
 logging.level.org.apache.tomcat=ERROR 
 logging.level.org.apache.tomcat.util.net=ERROR
 ```
+
+# hasRole not working 
+기본적으로 생성되는 ROLE에는 prefix가 붙는다.  (기본 ROLE_)
+
+not working case
+```
+        .antMatchers("/test/user").hasRole("USER")
+
+		List<SimpleGrantedAuthority> auth = Arrays.asList(new SimpleGrantedAuthority("ADMIN"));
+		CutomUserDetail user1 = new CutomUserDetail(1L, "test", "a1234", auth);
+		this.repository.add(user1);
+```
+
+working case
+```
+        .antMatchers("/test/user").hasRole("USER")
+
+		List<SimpleGrantedAuthority> auth = Arrays.asList(new SimpleGrantedAuthority("ROLE_ADMIN"));
+		CutomUserDetail user1 = new CutomUserDetail(1L, "test", "a1234", auth);
+		this.repository.add(user1);
+```
