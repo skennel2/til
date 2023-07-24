@@ -26,3 +26,5 @@ PasswordEncoder passwordEncoder =
 ```
 
 ? 이렇게 알고리즘을 데이터에 명세하는것이 보안상 크게 문제가 되지는 않는다고 한다.
+
+[reference](https://docs.spring.io/spring-security/reference/features/authentication/password-storage.html)
