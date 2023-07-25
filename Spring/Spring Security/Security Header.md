@@ -62,10 +62,15 @@ Referrer-Policy: same-origin
 예를 들어: https://scshim.tistory.com/entry/WebRTC란 이라는 주소에서 다른 웹사이트로 이동한다면,  
 https://scshim.tistory.com/ 로 이동할 때만 주소를 남깁니다. https://naver.com 으로 이동한다면 주소를 남기지 않습니다.
 
+참고로 Referrer-Policy를 따로 설정하지 않으면 브라우저 기본값을 따르게된다. 
+크롬은 85 버전부터 기본 정책이 no-referrer-when-downgrade에서 strict-origin-when-cross-origin으로 변경되었다.
 
 # 참고 
-https://docs.spring.io/spring-security/reference/features/exploits/headers.html
+[레퍼런스](https://docs.spring.io/spring-security/reference/features/exploits/headers.html)
 https://www.zerocho.com/category/HTTP/post/5b594dd3c06fa2001b89feb9
 https://dj-min43.medium.com/http-mime-%ED%83%80%EC%9E%85%EA%B3%BC-content-type-%EA%B7%B8%EB%A6%AC%EA%B3%A0-nosniff-d021557a7de
 https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=aepkoreanet&logNo=221575708943
 https://velog.io/@sejinkim/Referrer-Policy%EC%9D%98-%EC%9D%B4%ED%95%B4
+[[모던JS: 심화] 네트워크 요청 (2)](https://velog.io/@longroadhome/%EB%AA%A8%EB%8D%98JS-%EC%8B%AC%ED%99%94-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EC%9A%94%EC%B2%AD-2)
+[Chrome의 기본 레퍼러 정책 변화 - strict-origin-when-cross-origin (2020.07 / Chrome v.85)](https://americanopeople.tistory.com/358)
+[HTTP: Content-Type 에 대해 알아보자 (application/json, application/x-www-form-urlencoded, multipart/form-data)](https://jw910911.tistory.com/117)
