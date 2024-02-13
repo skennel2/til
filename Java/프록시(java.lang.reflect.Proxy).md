@@ -13,21 +13,20 @@ spring-data-jpa, mybatis-spring의 repository 인터페이스도 이를 근간�
 ```java
     import java.lang.reflect.Proxy;
 
-    // 프록시 객체에 대한 메소드 요청이 있을때마다 아래 람다가 실행되어 처리한다. 
-    InvocationHandler invoker = (proxy, method, arguments) -> {
-        if (method.getName().equals("getValue")) {
-            return "Hello";
-        }
-        
-        throw new RuntimeException();
-    };
-    
     // ValueProvider 인터페이스의 구현체를 프록시로 생성한다.
     ValueProvider proxy = (ValueProvider)Proxy.newProxyInstance(
-            ValueProvider.class.getClassLoader(), 
-            new Class[] {ValueProvider.class}, 
-            invoker
-        );
+        ValueProvider.class.getClassLoader(), 
+        new Class[] {ValueProvider.class},
+        // 프록시 객체에 대한 메소드 요청이 있을때마다 아래 람다가 실행되어 처리한다. 
+        (proxy, method, arguments) -> {
+            if (method.getName().equals("getValue")) {
+                return "Hello";
+            }
+            
+            throw new RuntimeException();
+        }
+    );
     
-    proxy.getValue() // Hello
+    // Hello
+    proxy.getValue(); 
 ```

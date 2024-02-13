@@ -40,7 +40,7 @@ client package.json
 
 의문1 
 ====================
-아레 명령어를 수행하지 않고 package.json을 편집하고 작업했을때 정상적으로 참조되지 않는다. 
+아레 명령어를 수행하지 않고 package.json을 편집하고 작업했을때 정상적으로 참조되지 않는다.  
 __npm install my_lib -w client__ 
 
 ##### 참고1
