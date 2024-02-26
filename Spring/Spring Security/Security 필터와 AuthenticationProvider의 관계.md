@@ -1,6 +1,8 @@
+# Security 필터와 AuthenticationProvider의 관계
+
 Security 필터는 HttpServletRequest, HttpServletResponse를 파싱해 원하는 데이터를 추리거니 아니면 변경할수도 있다.
 
-Security 필터는 요청정보로 Authentication객체를 만들어 ProviderManager에게 인증을 요청한다.
+Security 필터는 요청 정보로 Authentication 객체를 만들어 ProviderManager에게 인증을 요청한다.
 ```java
 return getAuthenticationManager().authenticate(new CustomAuthenticationToken(email, credentials));
 ```

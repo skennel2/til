@@ -1,14 +1,13 @@
 # 스프링 시큐리티의 기본적인 HTTP Header 세팅 
-아래는 디폴트이며 원한다면 커슼
+아래는 디폴트이며 원한다면 커스터마이징 가능한듯
 
 ## Cache-Control 
 ```
 Cache-Control: no-cache, no-store, max-age=0, must-revalidate
 ```
-
- no-cache 캐시를 쓰기전에 서버에 캐시를 써도되는지 여부를 묻는다. 
- no-store 아무것도 캐싱하지 않는다. 
- must-revalidate 만료된 캐시만 서버에 확인을 받도록 한다. 
+no-cache 캐시를 쓰기전에 서버에 캐시를 써도되는지 여부를 묻는다. 
+no-store 아무것도 캐싱하지 않는다. 
+must-revalidate 만료된 캐시만 서버에 확인을 받도록 한다. 
 
 참고로 Cache-Control 추가적인 옵션은  public, private이 있다.
 public, private public이면 공유 캐시(또는 중개 서버)에 저장해도 된다는 뜻이고 private이면 브라우저같은 특정 사용자 환경에만 저장하라는 뜻입니다.
@@ -20,7 +19,7 @@ __스프링 은 디폴트로 캐싱사용은 비활성화한다.__
 X-Content-Type-Options: nosniff
 ```
 
- content sniffing을 막는다. 지정된 MIME 타입으로만 Content Type을 해석한다.
+content sniffing을 막는다. 지정된 MIME 타입으로만 Content Type을 해석한다.
 
 
 ## HTTP Strict Transport Security
@@ -32,7 +31,7 @@ Strict-Transport-Security: max-age=31536000 ; includeSubDomains ; preload
 SSL Stripping 방어
 
 ## HPKP
- Man In Middle Attack을 막는 옵셥이라는데 deprecated되는 옵션인듯한다.
+Man In Middle Attack을 막는 옵셥이라는데 deprecated되는 옵션인듯한다.
 
 ## X-Frame-Options
 ```
