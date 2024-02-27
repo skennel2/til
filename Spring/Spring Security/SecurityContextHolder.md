@@ -1,0 +1,4 @@
+SecurityContextHolder는 SecurityContext를 담고있다.
+SecurityContext는 Authentication object를 담고있다.
+
+SecurityContextHolder는 Authentication 저장에 ThreadLocal을 사용한다.
