@@ -10,6 +10,7 @@ public class ApiKeyAuthenticationFilter extends AbstractAuthenticationProcessing
         super("/api/**"); // 인증을 수행할 경로 지정
     }
 
+	// HTTP요청에서 Authentication을 생성한다. 
     @Override
     public Authentication attemptAuthentication(HttpServletRequest request, HttpServletResponse response) {
         String apiKey = request.getHeader("X-Api-Key");
@@ -24,10 +25,11 @@ public class ApiKeyAuthenticationFilter extends AbstractAuthenticationProcessing
 
         return authentication;
     }
-
+	
+	// 인증 성공 시 수행할 작업
     @Override
     protected void successfulAuthentication(HttpServletRequest request, HttpServletResponse response, FilterChain chain, Authentication authResult) throws IOException, ServletException {
-        // 인증 성공 시 수행할 작업
+        
         chain.doFilter(request, response);
     }
 }
