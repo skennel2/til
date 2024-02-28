@@ -10,7 +10,7 @@ enum Option<T> {
 }
 ```
 
-```rust     
+```rust
     // Some을 사용할 경우 타입추론이 일어난다.
     let option1 = Option::Some(32);
     // None을 사용할 경우 타입을 명시해야한다.
