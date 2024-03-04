@@ -1,9 +1,11 @@
-Status Line
-Headers
-공란
-Body
+# HTTP Response 형태 
+1. Status Line
+2. Headers 
+3. 공란
+4. Body
 
-```
+예시
+```http
 HTTP/1.1 200 OK
 Content-Length: 88
 
@@ -13,4 +15,13 @@ Content-Length: 88
 <h1>!</h1>
 </body>
 </html>
+```
+
+# Status Line
+1. HTTP Version
+2. Status Code
+3. Status Text
+
+```http
+HTTP/1.1 200 OK
 ```
