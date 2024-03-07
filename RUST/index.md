@@ -1,3 +1,7 @@
+# Issue
+vs code의 rust-analyzer FetchWorkspaceError에러로 동작에는 문제없지만 인텔리센스등이 동작안하는 문제
+setting.json(작업영역 level)에 불필요한 linkedProjects이 포함되어 있었음
+[https://github.com/rust-lang/rust-analyzer/issues/14477]
 
 ---
 

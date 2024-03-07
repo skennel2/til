@@ -38,6 +38,14 @@ client package.json
     }
 ```
 
+npm install -w 명령어에서 -w 옵션은 --workspace의 단축 표현입니다. 
+이 옵션은 npm 워크스페이스를 사용하는 프로젝트에서 특정 워크스페이스의 종속성만 설치하도록 지시합니다.
+예를 들어, 다음과 같이 사용할 수 있습니다:
+
+```bash
+npm install -w workspace-name
+```
+
 의문1 
 ====================
 아레 명령어를 수행하지 않고 package.json을 편집하고 작업했을때 정상적으로 참조되지 않는다.  
