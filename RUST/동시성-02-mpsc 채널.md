@@ -3,12 +3,6 @@ mpsc는 복수 생산자, 단일 소비자 (multiple producer, single consumer) 
 mpsc::channel::<String>(); 이 코드는 2개짜리 튜플을 리턴하고 첫번째는 송신자, 두번째는 수신자이다.
 아래 예제는 송신 스레드와 수신 스레드 2개를 만들어 스레드간 통신을 하는 예제이다.
 
-전송은 send 수신은 recv로한다.
-recv는 스레드의 실행을 블록시키고 채널로 부터 값을 받을때까지 기다린다. 
-try_recv는 블록시키지 않고 즉시 Result<T, E>를 리턴한다. 
-이때 전송받은 값이 있다면 Ok(T)를 아니면 E를 리턴한다.
-루프안에서 블록없이 전송값을 처리할 때 유용하다.
-
 ```rust
 // tx는 송신자, rx는 수신자
 let (tx, rx) = mpsc::channel::<String>();
@@ -38,6 +32,12 @@ thread::spawn(move || {
 // Got: banana
 ```
 
+전송은 send 수신은 recv로한다.
+recv는 스레드의 실행을 블록시키고 채널로 부터 값을 받을때까지 기다린다. 
+try_recv는 블록시키지 않고 즉시 Result<T, E>를 리턴한다. 
+이때 전송받은 값이 있다면 Ok(T)를 아니면 E를 리턴한다.
+루프안에서 블록없이 전송값을 처리할 때 유용하다.
+
 ## 소유권 이동
 값을 다른 스레드로 보내고나서 그 값이 수정되거나 버려지는 상황을 원천 차단한다. 
 
@@ -47,7 +47,8 @@ thread::spawn(move || {
     // send는 인자의 소유권을 요구한다.
     tx.send(val).unwrap();
 
-    // 컴파일에러
+    // 컴파일에러 
+    // val의 소유권은 send로 이동된 상태다.
     println!("val is {}", val);
 });
 ``` 

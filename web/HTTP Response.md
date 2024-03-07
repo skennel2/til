@@ -5,7 +5,7 @@
 4. Body
 
 예시
-```http
+```
 HTTP/1.1 200 OK
 Content-Length: 88
 
@@ -22,6 +22,6 @@ Content-Length: 88
 2. Status Code
 3. Status Text
 
-```http
+```
 HTTP/1.1 200 OK
 ```
