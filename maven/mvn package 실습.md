@@ -6,7 +6,7 @@
     mvn archetype:generate -DgroupId=com.example -DartifactId=myproject -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
     ```
 1. main함수를 포함한 클래스 작성
-1. jar로 package
+1. jar로 package하기
     ```bash
     mvn clean package
     ```
