@@ -56,7 +56,7 @@
     1. maven-assembly-plugin로 fat jar 방식으로 재 package 
     1. fat jar로 package하면 두개의 jar파일이 target 폴더에 떨어진다.
     1. 이중 하나는 모든 종속성이 하나로 묶이며 크기도 훨씬 크다.
-    1. 현재는 __maven-shade-plugin__ 이걸더 많이 쓰는듯? (uber-jar)
+    1. 현재는 __maven-shade-plugin__ 이걸 더 많이 쓰는듯? (uber-jar)
 
 # maven-assembly-plugin
 ```xml
