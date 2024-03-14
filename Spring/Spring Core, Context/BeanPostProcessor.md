@@ -10,3 +10,8 @@ public interface BeanPostProcessor {
     Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException;
 }
 ```
+
+# ConfigurableBeanFactory.addBeanPostProcessor로 BeanPostProcessor를 등록하지 않고 빈으로도 등록가능
+AbstractApplicationContext의 refresh 로직중 빈에서 BeanPostProcessor를 찾아 addBeanPostProcessor해주는 부분이 존재
+
+PostProcessorRegistrationDelegate 참고
