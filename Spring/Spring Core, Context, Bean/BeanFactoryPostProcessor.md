@@ -1,5 +1,5 @@
 # BeanFactoryPostProcessor 
-빈팩토리후처리기가 작동되는 시점은 모든 컴포넌트스캔후 
+빈팩토리 후처리기가 작동되는 시점은 모든 컴포넌트 스캔후 
 스캔된 모든 컴포넌트의 빈정의(Bean Definition)가 생성된 시점이다. 
 
 ConfigurableListableBeanFactory에 인자로 접근할수 있어 모든 빈정의에 접근및 변경이 가능해
