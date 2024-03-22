@@ -18,6 +18,7 @@ public class TestComponent {
     
     public void callMyBean() {
         // 여기서 myBean은 new로 생성된 인스턴스가 아닌 컨텍스트에 등록된 MyBean 타입의 빈이다.
+        // 여러번 호출된다고 해도 언제나 같은 인스턴스가 리턴될것이다.
         MyBean myBean = this.configuration.myBean();
     }
 }

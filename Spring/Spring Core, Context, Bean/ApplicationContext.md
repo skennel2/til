@@ -2,13 +2,12 @@
 # 주요 concrete 클래스
 
 ## AnnotationConfigApplicationContext
+여러 @Configuration클래스가 있을때 나중에 정의된 @Bean메소드가 이전것을 덮어쓴다.
 
 ## GenericWebApplicationContext
 
 ## AnnotationConfigWebApplicationContext
 WebApplicationContext
-
-
 
 ---
 
