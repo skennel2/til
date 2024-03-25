@@ -1,4 +1,4 @@
-# 빈 후처리기 BeanPostProcessor 
+# 빈 후처리기 interface BeanPostProcessor 
 빈 팩토리의 hook중 하나이다
 빈등록을 하기 전에 빈을 커스텀할수 있게한다.
 
