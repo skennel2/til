@@ -8,5 +8,8 @@
 캐시는 SRAM으로 이루어져 있고 통상 메인메모리인 DRAM보다 빠르다. 
 SRAM은 주소값을 키값으로 가지는 해시테이블과 같다.
 
+# Java Volatile
+Java의 volatile 키워드는 변수를 캐시가 아닌 메인메모리에서 읽겠다는 명시이다.
+
 # 참고
 (캐시가 동작하는 아주 구체적인 원리)[https://parksb.github.io/article/29.html]
