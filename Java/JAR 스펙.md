@@ -1,6 +1,7 @@
 # jar 파일
 1. META-INF 디렉토리를 포함한다. (선택적)
 1. java 커맨드라인 도구로 생성
+    1. ex) jar cf HelloWorld.jar HelloWorld.class
 
 # META-INF 구성
 1. MANIFEST.MF
