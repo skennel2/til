@@ -35,7 +35,7 @@ private List<HandlerMapping> handlerMappings;
     1. HttpRequestHandlerAdapter
     1. SimpleControllerHandlerAdapter
     1. AnnotationMethodHandlerAdapter (*)
-        1. depracated - RequestMappingHandlerAdapter
+        1. AnnotationMethodHandlerAdapter는 depracated 대체되는 클래스는  RequestMappingHandlerAdapter
 
 ```java 
 /** List of HandlerAdapters used by this servlet */
