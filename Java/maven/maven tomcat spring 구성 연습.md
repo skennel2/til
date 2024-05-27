@@ -18,6 +18,9 @@ bin/startup.sh
 bin/shutdown.sh
 ```
 
+포트변경 
+톰캣루트 - conf - server.xml 확인
+
 ---
 
 # 스프링 의존성 설치
