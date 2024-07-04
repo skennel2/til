@@ -2,6 +2,8 @@
 
 https://docs.gradle.org/current/userguide/partr1_gradle_init.html
 
+기본적인 그래이들 빌드 기반 자바 이플리케이션을 만드는 명령
+
 ```bash
 gradle init --type java-application  --dsl kotlin
 ```
@@ -73,6 +75,8 @@ tasks.named<Test>("test") {
     useJUnitPlatform()
 }                                           
 ```
+
+---
 
 # Understanding the Build Lifecycle
 

@@ -11,10 +11,7 @@
 1. services/
     1. 모든 ServiceProvider 설정 파일들이 포함된다.
 
-# menifest
-1. 
-
-# menifest main 속성
+# menifest의 main 속성
 
 JAR 파일의 메니페스트(Manifest)는 JAR 파일에 대한 메타데이터를 포함하는 특별한 파일입니다. 
 이 메타데이터에는 JAR 파일의 속성 및 구성 정보가 포함되어 있습니다. 
