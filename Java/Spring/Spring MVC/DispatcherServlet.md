@@ -23,6 +23,15 @@
 1. 컨트롤러의 모델생성과 정보등록
 
 ---
+# DispatcherServlet 확장 포인트 
+1. HandlerExceptionResolver
+1. ViewResolver
+1. LocaleResolver
+1. ThemeResolver
+1. RequestToViewNameTranslator
+
+
+---
 
 # 핸들러 매핑
 1. 핸들러 매핑은 DispatcherServlet이 어떤 컨트롤러에게 작업을 위임할지 결정하는 작업을 말한다.
