@@ -1,5 +1,8 @@
 
 # 주요 concrete 클래스
+1. AnnotationConfigApplicationContext
+1. GenericWebApplicationContext
+1. AnnotationConfigWebApplicationContext
 
 ## AnnotationConfigApplicationContext
 @Configuration 클래스나 @Component, @Inject 어노테이션을 사용하는 클래스를 입력으로 받는다. 

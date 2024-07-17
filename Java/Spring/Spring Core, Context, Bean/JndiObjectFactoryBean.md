@@ -1,6 +1,7 @@
 # class JndiObjectFactoryBean
-JNDI 오브젝트를 lookup하는 팩토리빈 클래스
-보통 서블릿 컨테이너에 데이터 소스에 대한 설정이 저장되어있고 그걸 JNDI로 lookup해 읽어오는 경우에 사용하는듯 하다.
+1. org.springframework.jndi
+1. JNDI 오브젝트를 lookup하는 팩토리빈 클래스
+1. 보통 서블릿 컨테이너에 데이터 소스에 대한 설정이 저장되어있고 그걸 JNDI로 lookup해 읽어오는 경우에 사용하는듯 하다.
 
 # example
 
