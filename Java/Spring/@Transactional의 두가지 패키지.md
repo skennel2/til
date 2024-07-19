@@ -6,7 +6,7 @@ javax는 java ee에 귀속된 어노테이션이고
 springframework버전은 스프링에 귀속된 어노테이션이지만
 javax.transaction.Transactional도 지원하기 시작
 
-springframework 버전에 더 많은 옵션이 존재 ßßß
+springframework 버전에 더 많은 옵션이 존재
 
 # Spring이 javax.transaction.Transactional를 처리하는 방법 
 Spring이 두 어노테이션을 처리하는 방식이 완전동일하지는 않은거같음

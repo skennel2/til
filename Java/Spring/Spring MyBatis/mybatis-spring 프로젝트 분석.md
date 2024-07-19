@@ -1,4 +1,4 @@
-# 핵심적인 빈 SqlSessionFactory
+## 핵심적인 빈 SqlSessionFactory
 SqlSessonFactoryBean이라는 FactoryBean을 통해서 빈 설정을 할수있다.
 DataSource, 모든 Mapper(xml) 파일 등록, 기타 공통 설정을 담당하는 Configuration을 설정해준다. 
   

@@ -1,7 +1,7 @@
-# @Bean
-* 빈을 생성하는 메소드에 대한 정의
-* name 속성이 제공되지만, 기본적략은 @Bean 메소드의 이름을 사용하는것 
-* name 속성은 명시적인 이름을 지정할 필요가 있을때 사용할수 있다. 배열도 허용하는것에 유의
+# @Bean 어노테이션
+1. 빈을 생성하는 메소드에 대한 정의
+1. name 속성이 제공되지만, 기본적략은 @Bean 메소드의 이름을 사용하는것 
+1. name 속성은 명시적인 이름을 지정할 필요가 있을때 사용할수 있다. 배열도 허용하는것에 유의
 ```java
      @Bean({"b1", "b2"}) // bean available as 'b1' and 'b2', but not 'myBean'
      public MyBean myBean() {
@@ -9,7 +9,8 @@
          return obj;
      }
 ```
-* 일반적으로 @Configuration 클래스 내에 메소드에 사용된다. 
+4. 일반적으로 @Configuration 클래스 내에 메소드에 사용된다. 
+
 
 # Bean lite 모드
 @Bean 이 @Configuration이 아닌 @Component 유형의 클래스내에 정의될수도 있다.
