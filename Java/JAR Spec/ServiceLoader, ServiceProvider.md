@@ -15,8 +15,7 @@
 1. Service Provider Interface (SPI)
 1. SPI 구현체
 
-# ServiceLoader 클래스
-1. java.util.ServiceLoader
+# java.util.ServiceLoader 클래스
 1. 런타임에 SPI의 구현체를 동적으로 로드한다.
 
 어떻게 보면 DI 프레임워크와 서비스로더는 비슷한 문제를 해결한다. 

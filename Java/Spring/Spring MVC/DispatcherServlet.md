@@ -1,10 +1,10 @@
 # DispatcherServlet
 1. 스프링 MVC의 프론트 컨트롤러
-1. web.xml에 어떤 DispatcherServlet가 어떤 url의 요청을 처리할지 기술한다. 
+1. web.xml에 어떤 DispatcherServlet이 어떤 url의 요청을 처리할지 기술한다. 
 1. 스프링 컨텍스트에 등록되는 빈은 아니다.
     1. 하지만 기본적으로 가지고 있는 전략들은 주입받을수 있는 방법이 마련되어있다.
-1. HTTP 요청을 먼저 받아 공통적인 처리를 하고 처리가능한 스프링 컨트롤러로 요청을 위임한다.
-1. 주요 HTTP요청 처리로직은 FrameworkServlet.processRequest -> doService - doDispatch 메소드에서 이루어진다.  
+1. HTTP 요청을 먼저 받아 공통적인 처리를 하고 처리 가능한 스프링 컨트롤러로 요청을 위임한다.
+1. 주요 HTTP 요청 처리로직은 FrameworkServlet.processRequest -> doService - doDispatch 메소드에서 이루어진다.  
 
 # Http 요청 처리과정 (3.1.2)
 1. 서블릿 컨테이너가 HTTP요청을 받는다. 
@@ -58,7 +58,7 @@ private List<HandlerMapping> handlerMappings;
     1. HttpRequestHandlerAdapter
     1. SimpleControllerHandlerAdapter
     1. AnnotationMethodHandlerAdapter (*)
-        1. AnnotationMethodHandlerAdapter는 depracated 대체되는 클래스는  RequestMappingHandlerAdapter
+        1. AnnotationMethodHandlerAdapter는 depracated 대체되는 클래스는 RequestMappingHandlerAdapter
 
 ```java 
 /** List of HandlerAdapters used by this servlet */
