@@ -32,27 +32,42 @@
 
 ## 스트림
 1. 기본적으로 큐와 동일한 기능을 수행한다. 
+1. 기존 큐 대비 빠름 
 1. 차이는 메세지가 저장되고 소비되는 방식이다.
 1. 스트림은 append-only로 동작하며 반복적으로 읽을수 있다.
 1. 큐 방식에서는 메세지가 콘슈머로부터 처리된 이후에는 삭제되어 다시 읽는것이 불가능하다. 스트림을 사용하면 로그의 어느 지점으로나 연결이 가능하고 읽을수 있다.
 1. 스트림은 항상 persistent하고 replicated하다.
 1. 스트림은 큐를 대체하기 위해 나온것은아니고 보완하기위함이다.
 
-
-
+### 스트림 use case
+1. large fanout
+1. replay
+1. Throughput Performance
+1. Large backlogs
 
 ## 참고
 (rabbitmq exchange 라우팅 패턴)[https://devahea.github.io/2019/04/30/rabbitmq-exchange-%EB%9D%BC%EC%9A%B0%ED%8C%85-%ED%8C%A8%ED%84%B4/]
 ---
 
-# install (MAC OS)
+# install (MAC OS) 서버 시작
 ```bash
 brew update
 brew install rabbitmq
 brew info rabbitmq
 ```
 
-# 서버 시작 
+## plugin
+```bash 
+rabbitmq-plugins list
+
+rabbitmq-plugins enable rabbitmq_management
+
+rabbitmq-plugins disable rabbitmq_management
+```
+
+## 서버 시작 
+기본포트는 기본 큐는 __5672__ 스트림은 __5552__ 로 열린다.
+
 포어그라운드에서 시작:
 ```bash
 CONF_ENV_FILE="/opt/homebrew/etc/rabbitmq/rabbitmq-env.conf" /opt/homebrew/opt/rabbitmq/sbin/rabbitmq-server
@@ -76,10 +91,15 @@ brew services start rabbitmq
 brew services stop rabbitmq
 ```
 
-# 매니저 접속
+서버재시작 
+```bash
+brew services restart rabbitmq
+```
+
+## 매니저 접속
 http://localhost:15672/
 
-# 계정 생성
+## 계정 생성
 ```bash
 # 사용자 이름이 admin이고 비밀번호가 password인 계정을 생성
 rabbitmqctl add_user admin password
@@ -89,7 +109,7 @@ rabbitmqctl set_user_tags admin administrator
 rabbitmqctl set_permissions -p / admin ".*" ".*" ".*"
 ```
 
-# javascript로 연결테스트 
+## javascript로 연결테스트 
 ```bash
 npm install amqplib 
 npm install --save-dev @types/amqplib  
