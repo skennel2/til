@@ -48,3 +48,4 @@
     1. xml <bean> 태그의 destroy-method 속성을 사용하여 초기화 메서드를 지정할 수 있다.
 1. 주요메소드
     1. destroy()
+
