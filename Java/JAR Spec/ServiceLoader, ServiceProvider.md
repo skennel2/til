@@ -19,7 +19,10 @@
 1. 런타임에 SPI의 구현체를 동적으로 로드한다.
 
 어떻게 보면 DI 프레임워크와 서비스로더는 비슷한 문제를 해결한다. 
-서비스로더가 여전히 유효한 best practice일지는 검증이 필요할거같다.
+서비스로더가 여전히 유효한 best practice 일지는 검증이 필요할거같다.
+
+# 일반적인 메이븐 프로젝트에서 서비스 제공자 구성 파일 위치
+myproject/src/main/resources/META-INF/services/...
 
 # 정리 
  
