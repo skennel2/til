@@ -1,8 +1,8 @@
 # HTTP Response 형태 
 1. Status Line
-2. Headers 
-3. 공란
-4. Body
+1. Headers 
+1. 공란
+1. Body
 
 예시
 ```
