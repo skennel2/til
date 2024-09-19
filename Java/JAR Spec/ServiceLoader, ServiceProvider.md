@@ -27,11 +27,13 @@ myproject/src/main/resources/META-INF/services/...
 # 정리 
  
 @ 
-jar파일 스펙인 META-INF라는 디렉토리는 메타데이터가 담겨져있다. 서비스 프로바이더 관련 설정은 META-INF/services에 담긴다.  
+jar파일 스펙인 META-INF라는 디렉토리는 메타데이터가 담겨져있다. 
+서비스 프로바이더 관련 설정은 META-INF/services에 담긴다.  
 META-INF/services에 인터페이스의 이름으로 생성된 파일이 존재하고 이름이 되는 인터페이스는 SPI라고 부른다.
 파일의 내용으로는 SPI의 구현체의 풀네임(FQN)이 와야하고 해당 풀네임을 가지는 클래스는 SPI 구현체가 된다.
   
-예를 들어, META-INF/services/java.sql.Driver 파일이 있다면, java.sql.Driver 인터페이스를 구현한 클래스들이 해당 파일에 나열된다. 
+예를 들어, META-INF/services/java.sql.Driver 파일이 있다면, 
+java.sql.Driver 인터페이스를 구현한 클래스들이 해당 파일에 나열된다. 
 이 파일의 내용은 구현체 클래스의 완전한 이름(Fully Qualified Name, FQN)이다.
 이를 통해 서비스 로더(ServiceLoader)가 해당 인터페이스의 구현체를 찾고 로드할 수 있게 됩니다.
 
