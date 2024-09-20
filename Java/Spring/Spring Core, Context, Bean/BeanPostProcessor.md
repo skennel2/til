@@ -1,6 +1,6 @@
 # 빈 후처리기 interface BeanPostProcessor 
 빈 팩토리의 hook중 하나이다
-빈등록을 하기 전에 빈을 커스텀할수 있게한다.
+스프링에서 빈의 초기화 전후에 커스터마이징을 할 수 있는 인터페이스
 
 ```java
 public interface BeanPostProcessor {
