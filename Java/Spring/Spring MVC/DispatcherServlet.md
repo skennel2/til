@@ -6,7 +6,7 @@
 1. HTTP 요청을 먼저 받아 공통적인 처리를 하고 처리 가능한 스프링 컨트롤러로 요청을 위임한다.
 1. 주요 HTTP 요청 처리로직은 FrameworkServlet.processRequest -> doService - doDispatch 메소드에서 이루어진다.  
 
-# Http 요청 처리과정 (3.1.2)
+## Http 요청 처리과정 (3.1.2)
 1. 서블릿 컨테이너가 HTTP요청을 받는다. 
 1. HTTP요청이 DispatcherServlet에게 할당된 것이라면 전달받는다.
     1. web.xml의 servlet-mapping.url-pattern에 전달되어야하는 url이 정의되어있다.
@@ -22,14 +22,12 @@
     1. 제각기 다른 컨트롤러의 메소드를 일정한 방식으로 다룰수 있게 오브젝트 어뎁터 패턴을 사용한다.
 1. 컨트롤러의 모델생성과 정보등록
 
----
-# DispatcherServlet 확장 포인트 
+## DispatcherServlet 확장 포인트 
 1. HandlerExceptionResolver
 1. ViewResolver
 1. LocaleResolver
 1. ThemeResolver
 1. RequestToViewNameTranslator
-
 
 ---
 
@@ -63,38 +61,4 @@ private List<HandlerMapping> handlerMappings;
 ```java 
 /** List of HandlerAdapters used by this servlet */
 private List<HandlerAdapter> handlerAdapters;
-```
-
----
-
-# 핸들러 매핑 - HandlerMapping
-1. 핸들러 매핑의 중심 인터페이스
-1. HTTP요청과 핸들러 객체간의 매핑을 정의
-1. 매핑된 객체는 HandlerExecutionChain 객체로 래핑되어야한다. 
-
-```java
-HandlerExecutionChain getHandler(HttpServletRequest request) throws Exception; 
-```
-
-# 핸들러 매핑 - AbstractUrlHandlerMapping 
-1. HandlerMapping implementations
-
----
-
-# 핸들러 어뎁터 - HandlerAdapter
-1. 핸들러 어뎁터 중심 인터페이스
-
-```java
-ModelAndView handle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception;
-```
-
-# 핸들러 어뎁터 - AnnotationMethodHandlerAdapter
-1. HandlerAdapter implementations
-1. HttpRequestHandler 타입의 핸들러를 처리
-1. handle 처리는 HttpRequestHandler에게 위임
-
-# WebApplicationContext
-```java
-/** WebApplicationContext for this servlet */
-private WebApplicationContext webApplicationContext;
 ```

@@ -1,4 +1,4 @@
-#  @EnableWebMvc가 해주는것 
+# @EnableWebMvc가 해주는것 
 1. handler mapping 설정
 1. handler adapter 설정
 1. view resolver 설정
