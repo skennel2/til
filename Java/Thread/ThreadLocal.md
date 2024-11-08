@@ -29,4 +29,14 @@ public class ThreadLocalExample {
         threadB.start();
     }
 }
+
 ```
+# WAS 환경에서 사용시 주의점
+스레드 풀을 사용해 커넥션을 관리할때 하나의 요청에서 세팅한 ThreadLocal의 값이 전혀 다른 요청에서 접근할 수 있는 가능성이 생긴다.
+그렇기 때문에 스레드의 사용이 완료된 이후 스레드를 풀에 반환하기 전에 ThreadLocal을 초기화 시키는 작업이 필수적이다.
+
+# 사용처
+보통 사용하는 곳에서는 Holder라는 접미사를 붙이는듯하다.
+1. SecurityContextHolder
+1. RequestContextHolder
+    [RequestContextHolder](<../Spring/Spring MVC/RequestContextHolder.md>)

@@ -1,8 +1,8 @@
 # Service Provider
 1. jar의 SPI 스펙과 연관된다.
     1. https://docs.oracle.com/javase/8/docs/technotes/guides/jar/jar.html#Service_Provider
-1. META-INF/services 디렉터리의 파일들은 서비스 제공자 구성 파일
-    1. mariadb jdbc의 META-INF/services 내용
+1. META-INF/services 디렉터리안에 있는 파일들은 서비스 제공자 구성 파일이다.
+    1. 예를 들어 mariadb jdbc의 META-INF/services 내용을 살펴보면 
         1. META-INF/services/java.sql.Driver 파일존재
             1. 파일내용 
                 1. org.mariadb.jdbc.Driver
