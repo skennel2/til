@@ -3,7 +3,7 @@ HTTP 요청과 관련된 정보를 스레드 로컬(ThreadLocal)에 저장하고
 웹 요청의 정보를 스레드에 바인딩하여 어디서든 현재 요청 정보를 조회할 수 있게 해준다.
 
 1. 패키지 org.springframework.web.context.request
-1. 인스턴스화 될수 없는 클래스 static메소드들을 제공
+1. 인스턴스화 될수 없는 클래스 static 메소드들을 제공
 1. 필터, 인터셉터, AOP(Aspect-Oriented Programming)에서 현재 요청 정보를 사용할 때 유용
 
 ```java 
