@@ -74,7 +74,7 @@ web.xml을 이용할 경우 Filter를 구현한 클래스와 해당 필터가 �
 1. 빈 스캔 및 등록: @Component로 등록된 필터가 Spring 컨텍스트에 빈으로 등록
 1. 필터 자동 탐색: Spring Boot의 자동 구성 메커니즘이 Filter 인터페이스를 구현한 빈을 자동으로 탐색 
 1. 서블릿 컨텍스트에 필터 등록: Spring Boot는 ServletContextInitializer를 통해 필터를 서블릿 컨텍스트에 등록하며, 이를 addFilter() 메서드를 통해 서블릿 컨테이너에 추가
-1. 요청 처리 시 필터 적용: 등록된 필터는 서블릿 컨테이너에 의해 모든 요청에 대해 적용되며, Spring MVC의 DispatcherServlet 이전에 요청을 가로채거나 후처리하는 역할을 합니다.
+1. 요청 처리 시 필터 적용: 등록된 필터는 서블릿 컨테이너에 의해 모든 요청에 대해 적용되며, Spring MVC의 DispatcherServlet 이전에 요청을 가로채거나 후처리하는 역할을 한다.
 ---
 
 # 스프링의 필터 클래스

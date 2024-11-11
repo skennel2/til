@@ -4,8 +4,7 @@ public class DriverManager extends Object
 ```
 
 1. java.sql.DriverManager
-1. JDBC 드라이버 세트를 관리하기위한 기본 서비스
-    1. Driver를 등록하고 제거할수있는 기능을 제공한다.
+1. JDBC 드라이버 세트를 관리하기위한 기본 서비스이다. Driver를 등록하고 제거할수있는 기능을 제공한다.
 1. DB 커넥션을 얻는기능을 제공한다.
     1. Note: DataSource 인터페이스
         1. JDBC2.0 에 도입됨, db에 연결하는 또 다른 방법을 제공하며 DriverManager보다 좀더 권장되는 방식이다.

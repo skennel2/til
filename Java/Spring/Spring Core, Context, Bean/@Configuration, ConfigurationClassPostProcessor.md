@@ -41,3 +41,14 @@ public class TestComponent {
     }
 }
 ```
+
+# 스프링 컨테이너 인프라 빈
+* org.springframework.context.annotation.ConfigurationClassPostProcessor
+
+@Configuration 붙은 클래스를 설정클래스로서 동작하게 하는 BeanFactoryPostProcessor  
+아래 설정을 사용할 경우 디폴트로 등록되는 빈이다.  
+```xml
+<context:annotation-config/>  
+<context:component-scan/>  
+```
+(참고로 component-scan 설정시 annotation-config 설정을 모두 포함해서 component-scan 만 존재하면 된다.)

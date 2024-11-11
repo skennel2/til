@@ -16,5 +16,10 @@ public class MyBeanFactoryPostProcessor implements BeanFactoryPostProcessor {
 }
 ```
 
+# 사용처 얘시
+1. @Confifuration 어노테이션 처리를 위한 ConfigurationClassPostProcessor
+	1. [text](<@Configuration, ConfigurationClassPostProcessor.md>)
+
+# 참고
 [https://mangkyu.tistory.com/177]
 [https://stackoverflow.com/questions/30455536/beanfactorypostprocessor-and-beanpostprocessor-in-lifecycle-events]
