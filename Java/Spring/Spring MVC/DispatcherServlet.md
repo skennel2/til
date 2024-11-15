@@ -6,8 +6,8 @@
 1. HTTP 요청을 먼저 받아 공통적인 처리를 하고 처리 가능한 스프링 컨트롤러로 요청을 위임한다.
 1. 주요 HTTP 요청 처리로직은 FrameworkServlet.processRequest -> doService - doDispatch 메소드에서 이루어진다.  
 
-## Http 요청 처리과정 (3.1.2)
-1. 서블릿 컨테이너가 HTTP요청을 받는다. 
+## HTTP 요청 처리과정 (3.1.2)
+1. 서블릿 컨테이너가 HTTP 요청을 받는다. 
 1. HTTP요청이 DispatcherServlet에게 할당된 것이라면 전달받는다.
     1. web.xml의 servlet-mapping.url-pattern에 전달되어야하는 url이 정의되어있다.
 1. DispatcherServlet은 모든 요청에 대해 공통적으로 처리해하는 전처리작업이 등록된것이 있다면 수행한다.

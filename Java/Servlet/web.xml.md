@@ -14,8 +14,18 @@
     1. DispatcherServlet 서블릿 매핑
     1. ContextLoaderListener
 
-## ContextLoaderListener
-
+## ContextLoaderListener 설정
+```xml
+ <listener>
+     <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+ </listener>
+ <context-param>
+     <param-name>contextConfigLocation</param-name>
+     <param-value>
+         /WEB-INF/config/application-context.xml
+     </param-value>
+ </context-param>
+```
 1. org.springframework.web.context.ContextLoaderListener
 1. 보통 서블릿 웹 어플리케이션의 web.xml에 설정된다.
 1. 어플리케이션이 시작될때 RootApplicationContext을 생성하는 클래스이다.
