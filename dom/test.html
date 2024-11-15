@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus Event Example</title>
+</head>
+<body>
+    <div id="parent" style="padding: 20px; border: 2px solid black;">
+        <label for="inputElement">Input Field: </label>
+        <input id="inputElement" type="text" placeholder="Focus here" />
+    </div>
+
+    <script>
+        // 캡처링 단계에서 이벤트 리스너 등록 (true로 설정)
+        // document.getElementById('parent').addEventListener('focusin', function() {
+        //     console.log('Parent: focusin (capture phase)');
+        // }, true);  // true는 캡처링 모드
+
+        // document.getElementById('parent').addEventListener('focusout', function() {
+        //     console.log('Parent: focusout (capture phase)');
+        // }, true);  // true는 캡처링 모드
+
+        // // 버블링 단계에서 이벤트 리스너 등록 (false로 설정, 기본값)
+        // document.getElementById('parent').addEventListener('focusin', function() {
+        //     console.log('Parent: focusin (bubbling phase)');
+        // }, false);  // false는 버블링 모드
+
+        // document.getElementById('parent').addEventListener('focusout', function() {
+        //     console.log('Parent: focusout (bubbling phase)');
+        // }, false);  // false는 버블링 모드
+
+        // 실제 input 요소에서 focus 이벤트와 blur 이벤트를 등록
+        document.getElementById('inputElement').addEventListener('focus', function() {
+            console.log('Input Element: focus (버블링)');
+        }, false);  // 버블링하지 않음
+
+        document.getElementById('inputElement').addEventListener('blur', function() {
+            console.log('Input Element: blur (버블링)');
+        }, false);  // 버블링하지 않음
+
+        document.getElementById('inputElement').addEventListener('focus', function() {
+            console.log('Input Element: focus (캡쳐링)');
+        }, true); 
+
+        document.getElementById('inputElement').addEventListener('blur', function() {
+            console.log('Input Element: blur (캡쳐링)');
+        }, true); 
+
+        
+
+
+
+        document.getElementById('parent').addEventListener('focus', function() {
+            console.log('parent Element: focus (버블링)');
+        }, false);  // 버블링하지 않음
+
+        document.getElementById('parent').addEventListener('blur', function() {
+            console.log('parent Element: blur (버블링)');
+        }, false);  // 버블링하지 않음
+
+        document.getElementById('parent').addEventListener('focus', function() {
+            console.log('parent Element: focus (캡쳐링)');
+        }, true); 
+
+        document.getElementById('parent').addEventListener('blur', function() {
+            console.log('parent Element: blur (캡쳐링)');
+        }, true); 
+
+        // // focusin, focusout 이벤트 등록 (버블링 지원)
+        // document.getElementById('inputElement').addEventListener('focusin', function() {
+        //     console.log('Input Element: focusin (bubbling)');
+        // }, false);  // 버블링 지원
+
+        // document.getElementById('inputElement').addEventListener('focusout', function() {
+        //     console.log('Input Element: focusout (bubbling)');
+        // }, false);  // 버블링 지원
+    </script>
+</body>
+</html>
