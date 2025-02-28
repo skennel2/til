@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        #container {
+            width: 1000px;
+            height: 1000px;
+            position: relative;
+        }
+
+        #box {
+            width: 100px;
+            height: 100px;
+            background-color: darkcyan;
+            position: absolute;
+            /* left: 20px */
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="box"></div>
+    </div>
+    <script>
+        const box = document.getElementById('box');
+        if (box) {
+            let left = 20;
+            const callback = () => {
+                left = left + 0.1;
+                box.style.left = (left) + 'px';
+                requestAnimationFrame(callback)
+            }
+
+            const id = requestAnimationFrame(callback)
+        }
+    </script>
+</body>
+
+</html>
