@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        #container {
+            width: 200px;
+            height: 50px;
+            display: flex;
+            flex-direction: row;
+            background-color: red;
+        }
+
+        #box1 {
+            width: 100px;
+            height: 50px;
+            background-color: darkcyan;
+            display: flex;
+            flex-direction: row;
+        }
+
+        #box2 {
+            width: 120px;
+            height: 50px;
+            background-color: blue;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="box1"></div>
+        <div id="box2"></div>
+    </div>
+
+    <div>
+
+    </div>
+    <script>
+        const box = document.getElementById('box');
+        if (box) {
+            let left = 20;
+            const callback = () => {
+                left = left + 0.1;
+                box.style.left = (left) + 'px';
+                requestAnimationFrame(callback)
+            }
+
+            const id = requestAnimationFrame(callback)
+
+            setTimeout(() => {
+                // 호출되도 계속 실행된다?
+                cancelAnimationFrame(id);
+            }, 2000);
+        }
+    </script>
+</body>
+
+</html>
