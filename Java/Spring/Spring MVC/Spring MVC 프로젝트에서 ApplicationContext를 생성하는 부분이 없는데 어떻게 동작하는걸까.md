@@ -2,7 +2,7 @@
 # spring webmvc 프로젝트에서 ApplicationContext를 생성하는 부분이 없는데 어떻게 동작하는걸까?
 
 1. Spring MVC 프로젝트에서는 일반적으로 서블릿 컨테이너가 애플리케이션 컨텍스트를 관리하고 초기화한다.
-1. Spring MVC 애플리케이션은 보통 DispatcherServlet이라는 중앙 서블릿을 사용하여 요청을 처리한다. 이 DispatcherServlet은 서블릿 컨테이너에 의해 관리되며, 자체적으로 애플리케이션 컨텍스트를 생성하고 초기화합니다.
+1. Spring MVC 애플리케이션은 보통 DispatcherServlet이라는 중앙 서블릿을 사용하여 요청을 처리한다. 이 DispatcherServlet은 서블릿 컨테이너에 의해 관리되며, 자체적으로 애플리케이션 컨텍스트를 생성하고 초기화한당.
 
 * Spring MVC 의 구조
 1. 서블릿 컨테이너 (예: Tomcat): Spring MVC 애플리케이션은 서블릿 컨테이너 내에서 실행된다.
