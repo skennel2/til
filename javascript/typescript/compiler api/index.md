@@ -7,10 +7,8 @@
     "@types/node": "^22.5.0",
 
 # 간단한 예시 
-먼저 Program 객체를 createProgram 함수를 이용해 만들어야한다. 
-인자로는 ts파일들의 절대경로들과 (내 경우는 타겟 프로젝트 src 하위의 모든 ts파일을 스캔해 넘겨주었다.)
-tsconfig.json 내용에 해당하는 config 정보를 넘긴다. 
-이로써 기본적인 CompilerHost가 생성된다.
+먼저 Program 객체를 createProgram 함수를 이용해 만들어야한다. 인자로는 ts파일들의 절대경로들과 (내 경우는 타겟 프로젝트 src 하위의 모든 ts파일을 스캔해 넘겨주었다.)
+tsconfig.json 내용에 해당하는 config 정보를 넘긴다. 이로써 기본적인 CompilerHost가 생성된다.
 
 ```typescript
 import * as ts from 'typescript';
@@ -32,10 +30,8 @@ console.log(JSON.stringify(result));
 ```
 
 # Node
-추상구문트리(AST)에서의 하나의 노드를 나타낸다. 
-변수 선언, 함수 호출, 제어 구조(예: if, for 등) 같은 것들이 각각 노드로 표현
-코드 자체의 구조와 문법을 표현합니다.
-ts.Node는 여러 하위 타입(예: ts.Expression, ts.Statement, ts.Declaration)으로 구체화
+추상구문트리(AST)에서의 하나의 노드를 나타낸다. 변수 선언, 함수 호출, 제어 구조(예: if, for 등) 같은 것들이 각각 노드로 표현된다.  
+코드 자체의 구조와 문법을 표현한다. ts.Node는 여러 하위 타입(예: ts.Expression, ts.Statement, ts.Declaration)으로 구체화된다.
 
 1. kind: 노드의 종류를 나타내는 ts.SyntaxKind 값. (예: 변수 선언, 함수 호출, 표현식 등)
 1. flags
@@ -45,7 +41,7 @@ ts.Node는 여러 하위 타입(예: ts.Expression, ts.Statement, ts.Declaration
 1. getText(sourceFile?: SourceFile)
 1. forEachChild()
 
-## Declaration 
+# Declaration 
 ts.Node의 하위 타입
 코드에서 이름을 가지는 식별자나 타입을 정의하는 모든 노드
 
