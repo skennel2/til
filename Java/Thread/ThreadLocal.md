@@ -40,3 +40,4 @@ public class ThreadLocalExample {
 1. SecurityContextHolder
 1. RequestContextHolder
     [RequestContextHolder](<../Spring/Spring MVC/RequestContextHolder.md>)
+1. SqlSessionHolder
